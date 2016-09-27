@@ -11,7 +11,7 @@
       <br>
       <form id="myForm"> 
         <input type="file" name="filename" id="myFile" multiple>
-        <input type="button" value="Submit" onclick="iteratorFileUpload()">
+        <input type="button" value="Submit" onclick="iteratorFileUpload(this)">
       </form>
     </div>
     <div id="output">
@@ -32,7 +32,8 @@
       numUploads.total = 0;
       // Upload the files into a folder in drive
       // This is set to send them all to one folder (specificed in the .gs file)
-      function iteratorFileUpload() {
+      function iteratorFileUpload(elem) {
+       elem.disabled = true;      
         var allFiles = document.getElementById('myFile').files;
         if (allFiles.length == 0) {
           alert('No file selected!');
@@ -75,7 +76,8 @@
                                      );
         $(".progress-label").text(numUploads.done +'/'+ numUploads.total);
         if( numUploads.done == numUploads.total ){
-          numUploads.done = 0;
+          numUploads.done = 0;         
+          $('input[value="Submit"]').attr('disabled' , false);
         };
       }
     </script>
