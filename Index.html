@@ -53,11 +53,11 @@
           // Send each file at a time
           for (var i = 0; i < allFiles.length; i++) {
             console.log(i);
-            sendFileToDrive(allFiles[i]);
+            uploadFileToSpreadSheet(allFiles[i]);
           }
         }
       }
-      function sendFileToDrive(file) {
+      function uploadFileToSpreadSheet(file) {
         var reader = new FileReader();
         reader.onload = function (e) {
           var content = e.target.result;
