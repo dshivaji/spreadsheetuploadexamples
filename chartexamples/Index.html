@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    <?!= include('Javascript'); ?>
+    <?!= include('style'); ?>
+  </head>
+  <body>
+    <div class="panel panel-primary" id='main'>
+      <div class="panel-heading">Automation Summary
+      </div>
+      <div class="panel-body">
+        <div id="ss" class="container">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active">
+              <a href="#home" role="tab" data-toggle="tab">
+                <icon class="fa fa-home">
+                </icon> First
+              </a>
+            </li>
+            <li>
+              <a href="#profile" role="tab" data-toggle="tab">
+                <i class="fa fa-user">
+                </i> second
+              </a>
+            </li>
+            <li>
+              <a href="#messages" role="tab" data-toggle="tab">
+                <i class="fa fa-envelope">
+                </i> third
+              </a>
+            </li>
+            <li>
+              <a href="#settings" role="tab" data-toggle="tab">
+                <i class="fa fa-cog">
+                </i> fourth
+              </a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="apploader" class="text-center divloader">
+              <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate loader">
+              </span>
+            </div>
+            <div class="tab-pane fade active in" id="home">
+              <h2>First Metrics
+              </h2>
+              <!-- accordian starts here-->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        Header  Text here
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div id="myDiv" class="content">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default" id="panel2">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        Header text here
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div id="myDiv1" class="content">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- accordian stops here-->
+            </div>
+            <div class="tab-pane fade" id="profile">
+              <h2> second Metrics
+              </h2>
+            </div>
+            <div class="tab-pane fade" id="messages">
+              <h2>third Metrics
+              </h2>
+            </div>
+            <div class="tab-pane fade" id="settings">
+              <h2>fourth Metrics
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

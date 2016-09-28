@@ -1,0 +1,32 @@
+ <script>
+        
+          
+     $(function() {
+     $(document).ready(function(){
+     
+     function onSuccess(data) {
+       Plotly.newPlot('myDiv', data);
+       $('#apploader').hide();
+       
+      }
+     
+      function onSuccess1(data) {
+       Plotly.newPlot('myDiv1', data);
+       
+      }
+      
+      
+      google.script.run.withSuccessHandler(onSuccess)
+          .sample();
+      google.script.run.withSuccessHandler(onSuccess1)
+          .sample2();  
+    
+
+});
+     
+       
+       
+   });
+</script>
+
+
